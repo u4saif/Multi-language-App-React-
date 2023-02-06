@@ -1,14 +1,8 @@
-import { Button } from '@mui/material';
-import './App.css';
-
+import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div>
-      <h2>Hello Saif </h2>
-      <Button variant="outlined">Select your language</Button>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
