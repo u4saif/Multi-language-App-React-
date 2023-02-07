@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@emotion/react";
+import "./i18next";
 
 const theme = createTheme({
   palette: {
