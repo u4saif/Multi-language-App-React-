@@ -11,7 +11,7 @@ i18n.use(Backend)
 			// translation file path
 			loadPath: "/assets/i18n/{{ns}}/{{lng}}.json",
 		},
-		fallbackLng: "hi",
+		fallbackLng: "en",
 		// disabled in production
 		debug: false,
 		// can have multiple namespaces, in case you want to divide a huge

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import { Paper } from "@mui/material";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -9,7 +10,7 @@ import CircleNotificationsTwoToneIcon from "@mui/icons-material/CircleNotificati
 
 export default function NavBar() {
   const [value, setValue] = React.useState(0);
-
+  const { t } = useTranslation(["common"]);
   return (
     <Paper elevation={2} sx={{ width: "100%" }}>
       <BottomNavigation
@@ -21,16 +22,19 @@ export default function NavBar() {
         }}
       >
         <BottomNavigationAction
-          label="Favorites"
+          label={t("favorites")}
           icon={<FavoriteTwoToneIcon />}
         />
-        <BottomNavigationAction label="Home" icon={<HomeTwoToneIcon />} />
+        <BottomNavigationAction 
+          label={t("home")} 
+          icon={<HomeTwoToneIcon />} 
+          />
         <BottomNavigationAction
-          label="Profile"
+          label= {t("profile")}
           icon={<AccountCircleTwoToneIcon />}
         />
         <BottomNavigationAction
-          label="Notifications"
+          label={t("notifications")}
           icon={<CircleNotificationsTwoToneIcon />}
         />
 

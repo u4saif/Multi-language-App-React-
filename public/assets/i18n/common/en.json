@@ -1,5 +1,8 @@
 {
 	"submit": "Submit",
+	"home": "Home",
+	"favorites": "Favorites",
+	"notifications":"Notifications",
 	"welcomeBack": "welcome back !",
 	"profile": "Profile"
 }
