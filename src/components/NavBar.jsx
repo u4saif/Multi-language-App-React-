@@ -7,6 +7,7 @@ import FavoriteTwoToneIcon from "@mui/icons-material/FavoriteTwoTone";
 import HomeTwoToneIcon from "@mui/icons-material/HomeTwoTone";
 import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
 import CircleNotificationsTwoToneIcon from "@mui/icons-material/CircleNotificationsTwoTone";
+import LangDropdown from "./LangDropdown";
 
 export default function NavBar() {
   const [value, setValue] = React.useState(0);
@@ -25,19 +26,16 @@ export default function NavBar() {
           label={t("favorites")}
           icon={<FavoriteTwoToneIcon />}
         />
-        <BottomNavigationAction 
-          label={t("home")} 
-          icon={<HomeTwoToneIcon />} 
-          />
+        <BottomNavigationAction label={t("home")} icon={<HomeTwoToneIcon />} />
         <BottomNavigationAction
-          label= {t("profile")}
+          label={t("profile")}
           icon={<AccountCircleTwoToneIcon />}
         />
         <BottomNavigationAction
           label={t("notifications")}
           icon={<CircleNotificationsTwoToneIcon />}
         />
-
+        <LangDropdown />
       </BottomNavigation>
     </Paper>
   );

@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 function App() {
   return (
     <Suspense fallback={null}>
-      <Home />;
+      <Home />
     </Suspense>
   );
 }
