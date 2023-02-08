@@ -22,11 +22,11 @@ export default function NavBar() {
           setValue(newValue);
         }}
       >
+        <BottomNavigationAction label={t("home")} icon={<HomeTwoToneIcon />} />
         <BottomNavigationAction
           label={t("favorites")}
           icon={<FavoriteTwoToneIcon />}
         />
-        <BottomNavigationAction label={t("home")} icon={<HomeTwoToneIcon />} />
         <BottomNavigationAction
           label={t("profile")}
           icon={<AccountCircleTwoToneIcon />}
