@@ -11,7 +11,7 @@ import LangDropdown from "./LangDropdown";
 import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState("/");
   const { t } = useTranslation(["common"]);
   const navigate = useNavigate();
   return (
