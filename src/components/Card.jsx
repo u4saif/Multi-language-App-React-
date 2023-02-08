@@ -32,7 +32,7 @@ export default function SongCard(props) {
         <CardMedia
           component="img"
           height="204"
-          image={songObj["image"][2]["link"]}
+          image={''}
           sx={{objectFit:'fill'}}
           alt={songObj["album"]["name"]}
         />

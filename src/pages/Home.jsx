@@ -25,9 +25,8 @@ export default function Home() {
   }, [songs]);
 
   return (
-    <Box sx={{ bgcolor: "#E7EBF0" }}>
-      <NavBar />
-      <Typography variant="h4" align="center" sx={{ my: 2 }}>
+    <Box sx={{ bgcolor: "#e0e0e0" }}>
+      <Typography variant="h4" align="center" sx={{ py: 1 }}>
         {t("welcomeBack")}
       </Typography>
       { isLoading && <LinearProgress color="primary" />}
