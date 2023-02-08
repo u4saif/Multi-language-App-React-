@@ -7,6 +7,7 @@ import SongCard from "../components/Card";
 import { Box } from "@mui/material";
 import getData from "../services/HomeService";
 import LinearProgress from '@mui/material/LinearProgress';
+import SkeletonLoader from "../components/SkeletonLoader";
 
 export default function Home() {
   const { t } = useTranslation(["common"]);
@@ -38,7 +39,7 @@ export default function Home() {
           justifyContent: "center",
         }}
       >
-
+        { isLoading && <>{Array(6).fill(2).map((x, i) =>  <SkeletonLoader key={i}/>)}</>}
         {songs.map((song, i) => <SongCard key={i} data={song} />)}
       </Box>
       <LangDropdown />
