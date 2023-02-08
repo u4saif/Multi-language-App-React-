@@ -9,10 +9,13 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Box } from "@mui/material";
+import moment from 'moment';
+import { useTranslation } from "react-i18next";
 
 export default function SongCard(props) {
   const ranColor = Math.floor(Math.random() * 16777215).toString(16);
   const songObj = {...props.data};
+  const { t } = useTranslation(["common"]);
   try {
   return (
     <Box sx={{ my: 1, mx: 1 }}>
@@ -24,7 +27,7 @@ export default function SongCard(props) {
             </Avatar>
           }
           title={songObj["name"].length > 18 ? songObj["name"].substring(0,18)+'...' : songObj["name"]}
-          subheader={songObj["releaseDate"]}
+          subheader={moment(songObj["releaseDate"]).format('LL')}
         />
         <CardMedia
           component="img"
@@ -34,9 +37,9 @@ export default function SongCard(props) {
           alt={songObj["album"]["name"]}
         />
         <CardContent>
-          <Typography variant="body1" sx={{fontSize:'14px',height:'20px',overflow:'hidden'}} color="text.secondary">
-            From the movie {songObj["album"]["name"]}.
-            language: {songObj["language"]} .
+          <Typography variant="body1" sx={{fontSize:'14px'}} color="text.secondary">
+          {t("From the movie")} {songObj["album"]["name"].length > 32 ? songObj["album"]["name"].substring(0,32)+'...' : songObj["album"]["name"]}.
+            <br/>{t("language")}: {songObj["language"]}
           </Typography>
         </CardContent>
         <CardActions>
