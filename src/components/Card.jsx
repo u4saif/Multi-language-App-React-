@@ -15,20 +15,20 @@ export default function SongCard(props) {
   const songObj = {...props.data};
   try {
   return (
-    <Box sx={{ my: 1, mx: 1 ,height:"300"}}>
+    <Box sx={{ my: 1, mx: 1 }}>
       <Card sx={{ width: 375 }}>
-        <CardHeader sx={{fontSize:'18px',height:'20px',overflow:'hidden'}}
+        <CardHeader sx={{fontSize:'18px'}}
           avatar={
             <Avatar sx={{ bgcolor: "#" + ranColor }} aria-label="recipe">
               {songObj["name"].split("").shift()}
             </Avatar>
           }
-          title={songObj["name"]}
+          title={songObj["name"].length > 18 ? songObj["name"].substring(0,18)+'...' : songObj["name"]}
           subheader={songObj["releaseDate"]}
         />
         <CardMedia
           component="img"
-          height="154"
+          height="204"
           image={songObj["image"][2]["link"]}
           sx={{objectFit:'fill'}}
           alt={songObj["album"]["name"]}
@@ -49,6 +49,6 @@ export default function SongCard(props) {
     );
     }
     catch (error){
-      console.log(error);
+      //console.log(error);
     }
 }
